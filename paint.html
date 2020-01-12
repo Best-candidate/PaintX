@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paint-x</title>
+    <script type="text/javascript" src="paint.js"></script>
+    <link rel="stylesheet" type="text/css" href="paint.css"></link>
+</head>
+<body>
+    <div id="drawable">
+        <canvas id="canv" width="1000" height="800"></canvas>
+    </div>
+    <div align="right" id="toolbar">
+        <table>
+            <tr>
+                <th><img id="penImg" src="icons/pen.png" onclick="toolClicked('pen')"></th>
+                <th><img id="eraserImg" src="icons/eraser.png" onclick="toolClicked('eraser')"></th>
+            </tr>
+            <tr>
+                <th><img id="lineImg" src="icons/line.png" onclick="toolClicked('line')"></th>
+                <th><img id="rectImg" src="icons/rectange.png" onclick="toolClicked('rectangle')"></th>
+            </tr>
+            <tr>
+                <th><img id="hexImg" src="icons/hexagon.png" onclick="toolClicked('hexagon')"></th>
+                <th><img id="saveImg" src="icons/save.png" onclick="saveImg()"></th>
+            </tr>
+        </table>
+        <p id="showSize">20 px</p>
+        <input id="clr" type="color">
+        <input id="sz" type="range" min="1" max="100" oninput="changeSize()"> </br>
+        <a id="link"></a>
+    </div>
+</body>
+</html>
